@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+
+
+}
+
+.header-image{
+    height: 100vh
+    width: 100%
+    object-fit: cover;
+    filter: brightness(0.5)
+}
+
+.container {
+
+    position: absolute;
+    right: 32px;
+    left: 32px;
+    top: 16px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu-link {
+    background-color: rgba(128, 128, 128, 0.297);
+    color:white;
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-left: 30px;
+    font-family: "Teko", sans-serif;
+          font-optical-sizing: auto;
+           font-weight: <700>;
+          font-style: normal;
+}
+
+.menu-link:hover {
+    text-decoration: underline;
+    
+}
+
+
+.headline {
+  position: absolute ;
+  
+  top: 200px;
+  left: 200px;
+  right: 0px;
+  color:whitesmoke;
+  font-size: 2em;
+  text-shadow: 4px 3px 6px rgba(100,100,100,0.5);
+}
+.discription-section {
+  height: 500px;
+  padding: 30px 80px;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-aroung;
+    width: 636px;
+    padding:10px 0;
+    font-size: 2.5em;
+    font-weight: bold;
+
+}
+
+.calender1 {
+    border-spacing: 0;
+    border-collapse: collpase;
+    border: 2px solid whitesmoke;
+    font-size: 1em;
+    background: linear-gradient(white, lightgrey 60%);
+}
+
+td { 
+    border: 3px solid whitesmoke;
+    text-align: center;
+    vertical-align: middle;
+    width: 60px;
+    height: 60px;
+}
+
+tr:first-child{
+    background: grey;
+    color: white;
+
+}
+
+.heuteSpan{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    background:whitesmoke;
+    font-weight: bold;
+
+}
+
+.jahr {
+    color: whitesmoke;
+    left: 90px;
+}
+
+.monat {
+    color: whitesmoke;
+    left: 30px;
+}
+.calender {
+    display: flex;
+    position: absolute;
+    left: 800px;
+    top: 220px;
+}

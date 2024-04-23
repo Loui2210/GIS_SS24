@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abgabekalender</title>
+    <style>
+        /* Hier kannst du das Aussehen deiner Seite mit CSS anpassen */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            background-image: url('/img/background.png');
+            background-size: cover;
+            background-position: center;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Hintergrundfarbe des Headers mit Transparenz */
+            color: #fff;
+        }
+        #logo {
+            width: 100px; /* Hier die Breite deines Logos anpassen */
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #036914;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 10px;
+            margin-left: 10px;
+        }
+        .button:hover {
+            background-color: #095404;
+        }
+        main {
+            padding: 20px;
+            flex: 1;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        aside {
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .calendar {
+            width: 50%;
+            height: 200px;
+            border: 1px solid #ddd;
+        }
+        .list {
+            color: white;
+        }
+        .schriftliste {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/img/logo.png" alt="Logo" id="logo">
+        <nav>
+            <a href="seite1.html" class="button">Seite 1</a>
+            <a href="seite2.html" class="button">Seite 2</a>
+            <a href="seite3.html" class="button">Seite 3</a>
+        </nav>
+    </header>
+    <main>
+        <h1 class="list">Meine Liste</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Datum</th>
+                    <th>Inhalt</th>
+                    <th>Restliche Zeit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Hier können die Einträge für deine Liste eingefügt werden -->
+                <tr>
+                    <td class="schriftliste">01.01.2024</td>
+                    <td class="schriftliste">AV Praktikum</td>
+                    <td class="schriftliste">3 Tage</td>
+                </tr>
+                <tr>
+                    <td class="schriftliste">05.01.2024</td>
+                    <td class="schriftliste">UX Design</td>
+                    <td class="schriftliste">1 Woche</td>
+                </tr>
+                <!-- Weitere Einträge hier einfügen -->
+            </tbody>
+        </table>
+    </main>
+    <aside>
+        <h2 class="list">Kalender</h2>
+        <div class="calendar">
+            <!-- Hier kann der Kalenderinhalt eingefügt werden -->
+            <p class="schriftliste">Platzhalter für den Kalender</p>
+        </div>
+    </aside>
+</body>
+</html>
