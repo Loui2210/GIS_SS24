@@ -1,116 +1,132 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Hintergrundfarbe des Headers mit Transparenz */
+  color: #fff;
+}
+#logo {
+  width: 100px; /* Hier die Breite deines Logos anpassen */
+}
+.button {
+  padding: 10px 20px;
+  background-color: #036914;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+.button:hover {
+  background-color: #095404;
+}
+main {
+  padding: 20px;
+  flex: 1;
+}
 body {
-    margin: 0;
-
-
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Hiermit wird sichergestellt, dass der Body mindestens die gesamte Höhe des Viewports einnimmt */
+  background-image: url("/img/background.png");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
 }
-
-.header-image{
-    height: 100vh
-    width: 100%
-    object-fit: cover;
-    filter: brightness(0.5)
+.table1 {
+  width: 50%;
+  border-collapse: collapse;
 }
-
-.container {
-
-    position: absolute;
-    right: 32px;
-    left: 32px;
-    top: 16px;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.table2 {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  color: #fff; /* Schriftfarbe auf Weiß setzen */
 }
-.menu-link {
-    background-color: rgba(128, 128, 128, 0.297);
-    color:white;
-    padding: 5px 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    margin-left: 30px;
-    font-family: "Teko", sans-serif;
-          font-optical-sizing: auto;
-           font-weight: <700>;
-          font-style: normal;
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
 }
-
-.menu-link:hover {
-    text-decoration: underline;
-    
+th {
+  background-color: #f2f2f2;
+  color: #000; /* Schriftfarbe auf Schwarz setzen */
 }
-
-
-.headline {
-  position: absolute ;
+td {
+  color: #fff; /* Schriftfarbe auf Weiß setzen */
+}
+aside {
+  padding: 20px;
+  margin-top: 20px;
+}
+.calendar {
+  width: 50%;
+  height: 200px;
+  border: 1px solid #ddd;
+}
+.list {
+  color: white;
+}
+.form-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.form-container input[type="text"],
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+footer {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+}
+footer a {
+  color: #036914;
+  text-decoration: none;
+  margin: 0 10px;
+}
+@media only screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+    }
   
-  top: 200px;
-  left: 200px;
-  right: 0px;
-  color:whitesmoke;
-  font-size: 2em;
-  text-shadow: 4px 3px 6px rgba(100,100,100,0.5);
-}
-.discription-section {
-  height: 500px;
-  padding: 30px 80px;
-}
-
-.wrapper{
-    display: flex;
-    justify-content: space-aroung;
-    width: 636px;
-    padding:10px 0;
-    font-size: 2.5em;
-    font-weight: bold;
-
-}
-
-.calender1 {
-    border-spacing: 0;
-    border-collapse: collpase;
-    border: 2px solid whitesmoke;
-    font-size: 1em;
-    background: linear-gradient(white, lightgrey 60%);
-}
-
-td { 
-    border: 3px solid whitesmoke;
-    text-align: center;
-    vertical-align: middle;
-    width: 60px;
-    height: 60px;
-}
-
-tr:first-child{
-    background: grey;
-    color: white;
-
-}
-
-.heuteSpan{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    width: 90px;
-    height: 90px;
-    background:whitesmoke;
-    font-weight: bold;
-
-}
-
-.jahr {
-    color: whitesmoke;
-    left: 90px;
-}
-
-.monat {
-    color: whitesmoke;
-    left: 30px;
-}
-.calender {
-    display: flex;
-    position: absolute;
-    left: 800px;
-    top: 220px;
-}
+    #logo {
+      width: 80px; 
+      margin-bottom: 10px;
+    }
+  
+    .button {
+      width: 100%; 
+      margin-left: 0; 
+    }
+  
+    main {
+      padding: 10px; 
+    }
+  
+    .calendar,
+    .table1,
+    .table2 {
+      width: 100%; 
+    }
+  }

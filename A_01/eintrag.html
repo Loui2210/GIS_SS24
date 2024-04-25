@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abgabekalender-Eintrag hinzufügen</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="/img/logo.png" alt="LogoHFU" id="logo" />
+      <nav>
+        <a href="indexneu.html" class="button">Home</a>
+        <a href="eintrag.html" class="button">Eintrag hinzufügen</a>
+        <a href="vergangen.html" class="button">Vergangene Abgaben</a>
+      </nav>
+    </header>
+    <main>
+      <div class="form-container">
+        <h2>Dateneingabe</h2>
+        <form>
+          <label for="datum">Datum:</label>
+          <input type="date" id="datum" name="datum" />
+          <br />
+          <label for="inhalt">Inhalt:</label>
+          <input type="text" id="inhalt" name="inhalt" />
+
+          <label for="zusatzinfos">Zusätzliche Infos:</label>
+          <textarea id="zusatzinfos" name="zusatzinfos"></textarea>
+
+          <label for="links">Links:</label>
+          <input type="text" id="links" name="links" />
+
+          <button type="submit">Eintragen</button>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <a href="impressum.html">Impressum</a>
+    </footer>
+  </body>
+</html>
