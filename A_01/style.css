@@ -103,6 +103,45 @@ footer a {
   text-decoration: none;
   margin: 0 10px;
 }
+.calendar-controls {
+  display: flex;
+  justify-content: flex-start; /* Elemente nach links ausrichten */
+  align-items: center;
+  margin-bottom: 10px;
+  margin-left: 20px; /* Abstand von links */
+}
+
+.calendar-controls button {
+  margin: 0 10px;
+}
+
+.calendar-controls #currentMonth {
+  margin: 0 10px; /* Abstand zwischen den Steuerelementen */
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  padding: 10px;
+}
+
+.calendar .day {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.calendar .day.has-entry {
+  background-color: #FFD700;
+}
+
+.calendar .day.today {
+  background-color: #ADD8E6;
+}
+
 @media only screen and (max-width: 768px) {
     header {
       flex-direction: column;

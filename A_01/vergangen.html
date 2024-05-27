@@ -1,47 +1,31 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vergangene Abgaben</title>
-
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <img src="/img/logo.png" alt="LogoHFU" id="logo" />
-      <nav>
-        <a href="indexneu.html" class="button">Home</a>
-        <a href="eintrag.html" class="button">Eintrag hinzufügen</a>
-        <a href="vergangen.html" class="button">Vergangene Abgaben</a>
-      </nav>
-    </header>
-    <main>
-      <table class="table2">
-        <thead>
-          <tr>
-            <th>Abgabetermin</th>
-            <th>Abgabe</th>
-            <th>Erledigt am</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>01.05.2024</td>
-            <td>AV Praktikum</td>
-            <td>23.04.2024</td>
-          </tr>
-          <tr>
-            <td>04.05.2024</td>
-            <td>UX Design</td>
-            <td>21.04.2024</td>
-          </tr>
-          <!-- Weitere Einträge hier einfügen -->
-        </tbody>
-      </table>
-    </main>
-    <footer>
-      <a href="impressum.html">Impressum</a>
-    </footer>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vergangene Abgaben</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header id="header"></header>
+  <main>
+    <h1 class="list">Vergangene Abgaben</h1>
+    <table class="table2">
+      <thead>
+        <tr>
+          <th>Abgabetermin</th>
+          <th>Abgabe</th>
+          <th>Zusätzliche Infos</th>
+          <th>Aktionen</th>
+        </tr>
+      </thead>
+      <tbody id="pastEntriesTableBody">
+        <!-- Dynamische Einträge -->
+      </tbody>
+    </table>
+  </main>
+  <footer id="footer"></footer>
+  <script src="main.js"></script>
+</body>
 </html>
+
