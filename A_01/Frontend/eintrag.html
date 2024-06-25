@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eintrag</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img id="logo" src="img/logo.png" alt="Logo">
+        <div>
+            <a href="indexneu.html" class="button">Home</a>
+        </div>
+    </header>
+    <main>
+        <div class="form-container">
+            <form id="entryForm">
+                <input type="text" name="title" placeholder="Title">
+                <textarea name="description" placeholder="Description"></textarea>
+                <button type="submit" class="button">Eintrag speichern</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Company</p>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+    </footer>
+    <script>
+        document.getElementById('entryForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const title = this.title.value;
+            const description = this.description.value;
+
+            const response = await fetch('/api/entries', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ title, description })
+            });
+
+            if (response.ok) {
+                window.location.href = 'indexneu.html';
+            } else {
+                alert('Fehler beim Speichern des Eintrags');
+            }
+        });
+    </script>
+</body>
+<footer>
+  <a href="impressum.html">Impressum</a>
+</footer>
+</html>

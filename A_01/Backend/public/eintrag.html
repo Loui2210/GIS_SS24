@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eintrag hinzufügen</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header id="header"></header>
+  <main>
+    <form id="entryForm">
+      <label for="datum">Datum:</label>
+      <input type="date" id="datum" name="datum" required>
+      <label for="inhalt">Inhalt:</label>
+      <input type="text" id="inhalt" name="inhalt" required>
+      <label for="zusatzinfos">Zusatzinfos:</label>
+      <input type="text" id="zusatzinfos" name="zusatzinfos">
+      <button type="submit">Eintrag speichern</button>
+    </form>
+  </main>
+  <footer id="footer"></footer>
+  <script src="main.js"></script>
+</body>
+</html>
