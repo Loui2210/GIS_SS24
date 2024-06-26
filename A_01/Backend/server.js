@@ -1,12 +1,13 @@
 const express = require('express'); 
+const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const path = require('path');
 
 const app = express();
 const port = 3000;
+app.use(cors());
 
-// Middleware für statische Dateien
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.json());
@@ -39,33 +40,30 @@ app.get('/impressum.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'impressum.html'));
 });
 
-// API-Endpunkte
-app.get('/api/beispiele', (req, res) => {
-  Beispiel.find({}, (err, beispiele) => {
-    if (err) {
-      return res.status(500).send(err);
-    }
+
+app.get('/api/beispiele', async (req, res) => {
+  let beispiele = await Beispiel.find({});
     res.json(beispiele);
-  });
 });
 
-app.post('/api/beispiele', (req, res) => {
-  const beispiel = new Beispiel(req.body);
-  beispiel.save((err, savedBeispiel) => {
-    if (err) {
-      return res.status(500).send(err);
-    }
+app.post('/api/beispiele', async (req, res) => {
+  try {
+    const beispiel = new Beispiel(req.body);
+    const savedBeispiel = await beispiel.save();
     res.json(savedBeispiel);
-  });
+  } catch (err) {
+    res.status(500).send(err);
+  }
 });
 
-app.delete('/api/beispiele/:id', (req, res) => {
-  Beispiel.findByIdAndDelete(req.params.id, (err) => {
-    if (err) {
-      return res.status(500).send(err);
-    }
+
+app.delete('/api/beispiele/:id', async (req, res) => {
+  try {
+    await Beispiel.findByIdAndDelete(req.params.id);
     res.status(204).send();
-  });
+  } catch (err) {
+    res.status(500).send(err);
+  }
 });
 
 app.listen(port, () => {
